@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
+import DrumContext from '../../../context/drum-context';
+import scss from './Display.module.scss';
 
-const display = (props) => {
+const display = () => {
+  const context = useContext(DrumContext);
+
+  useEffect(() => {
+    setTimeout(() => {
+      context.updateDisplayContent('');
+    }, 3000);
+    console.log('display rendered');
+  }, []);
+
   return (
-    <div className="display">
-      <p className="display__text">
-        {props.content}
+    <div className={scss.display}>
+      <p className={scss.display__text}>
+        {context.displayContent}
       </p>
     </div>
   );

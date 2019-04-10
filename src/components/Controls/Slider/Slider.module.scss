@@ -1,0 +1,14 @@
+.slider__container {
+  width: 25%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  & .slider__label {
+    margin: 8px auto 15px auto;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}

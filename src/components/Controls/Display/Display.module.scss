@@ -1,0 +1,13 @@
+.display {
+  background-color: #333;
+  width: 45%;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &__text {
+    color: white;
+  }
+}

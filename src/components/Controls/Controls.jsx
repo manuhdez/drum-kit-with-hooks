@@ -2,14 +2,16 @@ import React from 'react';
 import Display from './Display/Display';
 import Switch from './Switch/Switch';
 import Slider from './Slider/Slider';
+import scss from './Controls.module.scss';
 
-const controls = (props) => {
+const controls = () => {
+
   return (
-    <div className="control__container">
-      <Switch text="Power" labels={['on', 'off']} />
-      <Display content={props.display} />
+    <div className={scss.controls__container}>
+      <Switch type="power" labels={['off', 'on']} />
+      <Display />
       <Slider label="Volume" />
-      <Switch text="Sounds" labels={['1', '2']} onChangeSound={props.changeSounds} />
+      <Switch type="sounds" labels={['1', '2']} />
     </div>
   );
 };

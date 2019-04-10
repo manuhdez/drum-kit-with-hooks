@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
-import PadGrid from '../../components/PadGrid/PadGrid';
-import Controls from '../../components/Controls/Controls';
-import sounds from '../../sounds.json';
+import React from "react";
+import PadGrid from "../../components/PadGrid/PadGrid";
+import Controls from "../../components/Controls/Controls";
+import scss from "./DrumMachine.module.scss";
 
 const drumMachine = () => {
-    const [soundLibrary, setSoundLibrary] = useState(sounds.bankOne);
-    const [displayContent, setDisplayContent] = useState('welcome');
-
-    return (
-        <React.Fragment>
-            <PadGrid sounds={soundLibrary} />
-            <Controls changeSounds={setSoundLibrary} display={displayContent} />
-        </React.Fragment>
-    );
+  return (
+    <div className={scss.container}>
+      <Controls />
+      <PadGrid />
+    </div>
+  );
 };
 
 export default drumMachine;
